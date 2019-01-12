@@ -2,8 +2,8 @@
 # It can only read text content, not the images and other media content
 import PyPDF2
 
-# read as binary file
-pdf_file = open("The-Road-to-Learn-React-Robin.pdf", "rb")
+# read as binary file, make sure you pass the pdf file name
+pdf_file = open("path-to-pdf.pdf", "rb")
 pdf_reader = PyPDF2.PdfFileReader(pdf_file)
 
 print("Number of pages in the pdf file:", pdf_reader.numPages)
