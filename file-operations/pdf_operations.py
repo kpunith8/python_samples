@@ -1,4 +1,4 @@
-# Use PyPDF2 module to work with pdf files
+# Use PyPDF2 library to work with pdf files
 # It can only read text content, not the images and other media content
 import PyPDF2
 
