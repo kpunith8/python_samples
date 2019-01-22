@@ -1,7 +1,6 @@
 import string
 import random
 
-
 class Encryption:
     def __init__(self, seed):
         # set a random seed
