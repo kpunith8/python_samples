@@ -43,7 +43,7 @@ print(str1.replace("Some", "Punith"))
 
 print("Converting num to string, use str() function")
 num = 10
-print(str(num) + " This is a number")
+print(str(num) + " is a number")
 
 print("Math functions")
 print("Power:", pow(5, 2), ",Ceiling", ceil(3.4), ",Sqaure root of 25", sqrt(25))
@@ -66,7 +66,7 @@ lucky_numbers = [23, 12, 44, 32, 99]
 friends = ["abc", "abd", "tbd"]
 
 # Getting the range from the list
-# can be specified as follows(2:) - from position 2 to end of the list (:4) - from 0th element to 3rd element
+# can be specified as follows(2:) - from position 2 to end of the list; (:4) - from 0th element to 3rd element
 print(lucky_numbers[:4])
 
 # Extending the list
@@ -296,3 +296,6 @@ if __name__ == "__main__":
     print("py_basics.py is being run directly")
 else:
     print("py_basics is being used by some other file")
+
+# check the type of a variable
+print("Type of words", type(words))
