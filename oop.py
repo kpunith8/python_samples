@@ -18,25 +18,25 @@ class Agent(Person):  # Agent inherits Person class
     def report(self):
         print("Overriding the Person's report()")
 
-    # _ defines a private method which won't be accessibe directly
+    # _ defines a private method which won't be accessible directly
     def _secrets(self):
         print("secrets")
 
-    # Pythons built-in functions can be overriden, this function prints the string representation of this class
+    # Pythons built-in functions can be overridden, this function prints the string representation of this class
     def __str__(self):
         return "Name is {}, eye colour is {}, and height is {}.".format(
             self.real_name, self.eye_color, self.height
         )
 
 
-agent = Agent("Punith", "black", 165)
-agent1 = Agent("Rama", "blue", 178)
+# agent = Agent("Punith", "black", 165)
+# agent1 = Agent("Rama", "blue", 178)
 
-agent.report()  # allows calling Person's methods usnig Agent's object
-agent._secrets()
+# agent.report()  # allows calling Person's methods using Agent's object
+# agent._secrets()
 
-print(agent)
-print(agent1)
+# print(agent)
+# print(agent1)
 
 # print(agent.real_name, agent.eye_color, agent.height)
 # print(agent1.real_name, agent1.eye_color, agent1.height)
@@ -55,6 +55,5 @@ class Circle:
         return 2 * Circle.pi * self.radius
 
 
-circle = Circle(3)
-print("Area of circle:", circle.area(), " Perimeter:", circle.perimeter())
-
+# circle = Circle(3)
+# print("Area of circle:", circle.area(), " Perimeter:", circle.perimeter())
