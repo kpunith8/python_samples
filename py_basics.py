@@ -4,7 +4,8 @@ import pdb
 import datetime
 
 # User defined imports, import by file-name
-import oop
+# Classes can be imported with Capital letters
+from classes_oop import Agent, Circle
 import file_one
 
 # Functions
@@ -27,6 +28,7 @@ def arbitraryArguments(*names):
     for name in names:
         print("Hi", name)
 
+
 print('Function accepting arbitrary number of arguments, *Operator:')
 arbitraryArguments("name1", "name2", "name3")
 
@@ -37,6 +39,16 @@ def double(x): return x * 3
 
 
 print("Lambda functions:", double(5))
+
+# keyword arguments
+# First declare positional arguments before the keyword arguments
+
+
+def print_name(first_name, last_name):
+    print(f'{first_name} {last_name}')
+
+
+print_name(first_name='Jhon', last_name='Smith')
 
 # Strings
 print("String manipulation")
@@ -115,7 +127,7 @@ print("Updated List: ", mixed_list)
 
 # unpacking a tuple or a list
 item1, item2 = number_tuple
-item3, item4 = [33,22]
+item3, item4 = [33, 22]
 
 print('Unpacking an tuple or list:', item1, item2, item3, item4)
 
@@ -233,10 +245,10 @@ print(datetime.datetime.now())
 
 
 # Using imported modules
-circle = oop.Circle(10)
+circle = Circle(10)
 print("Area of circle:", circle.area(), " Perimeter:", circle.perimeter())
 
-person = oop.Agent('Punith', 'black', 165)
+person = Agent('Punith', 'black', 165)
 print('Person details', person, person.report())
 
 
@@ -246,11 +258,29 @@ else:
     print("py_basics is being used by some other file")
 
 # Arithmetic operations on floting point numbers
-floatDiv = 10 / 3 # returns 3.3333333...
-floatDivAbsolute = 10 // 3 # returns 3, truncating the decimals
-exponentOf3 = 3 ** 3 # returns 27
+floatDiv = 10 / 3  # returns 3.3333333...
+floatDivAbsolute = 10 // 3  # returns 3, truncating the decimals
+exponentOf3 = 3 ** 3  # returns 27
 
 iterStar = 1
 while iterStar <= 5:
     print("*" * iterStar)
     iterStar += 1
+
+# Exceptions/Errors
+try:
+    age = 12 # int(input("Enter the age:"))
+    dividend = 20000 / age
+    print(f'{age} {dividend}')
+except ValueError:
+    print('Invalid Value')
+except ZeroDivisionError:
+    print('input cannot be 0')
+
+# Packages
+
+# Create folder and add file with a name __init__.py
+# which treats the folder as package
+# and can be imported as <folder-name>.<file-name>
+# for eg: import ecommerce.shipping
+# and methods can be used as ecommerce.shipping.calculate_tax()

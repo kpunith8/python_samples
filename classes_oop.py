@@ -1,4 +1,5 @@
 class Person:
+    # constructor
     def __init__(self, real_name):
         self.real_name = real_name
 

@@ -116,10 +116,11 @@ numbers_mapping = {
     "4": "Four"
 }
 
+#input("Enter a phone number within 1-4:")
 
 def numbers_to_str():
     outputStr = ""
-    numbersInput = "12345" #input("Enter a phone number within 1-4:")
+    numbersInput = "12345"
     for ch in numbersInput:
         outputStr += numbers_mapping.get(ch, "!") + " "
     return outputStr
