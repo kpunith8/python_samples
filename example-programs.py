@@ -87,3 +87,42 @@ print(
     "filter(): function returns the filtered list:",
     list(filter(check_even, [1, 2, 3, 4, 5, 6, 7, 8])),
 )
+
+# Remove the duplicates in a list
+numbers = [2, 3, 1, 22, 3, 46, 6, 3, 5, 7, 44, 2, 1]
+
+
+def unique_sorted_list(nums):
+    """
+    Returns a unique numbers in the list
+    in a sorted order.
+    List items should contain only the integers
+    """
+    unique_list = []
+    for number in nums:
+        if number not in unique_list:
+            unique_list.append(number)
+    unique_list.sort()
+    return unique_list
+
+
+print('Unique numbers in a list:', unique_sorted_list(numbers))
+
+# Convert number to a String representation using dictionaries
+numbers_mapping = {
+    "1": "One",
+    "2": "Two",
+    "3": "Three",
+    "4": "Four"
+}
+
+
+def numbers_to_str():
+    outputStr = ""
+    numbersInput = "12345" #input("Enter a phone number within 1-4:")
+    for ch in numbersInput:
+        outputStr += numbers_mapping.get(ch, "!") + " "
+    return outputStr
+
+
+print("Number to String representation:", numbers_to_str())

@@ -8,7 +8,7 @@ import oop
 import file_one
 
 # Functions
-print("Fibobacci series: Creating functions")
+print("Fibobacci series")
 
 
 def fib(n):  # write Fibonacci series up to n
@@ -20,14 +20,14 @@ def fib(n):  # write Fibonacci series up to n
 
 fib(10)
 
-# Functions, passing arbitrary arguments using
+# Functions, passing arbitrary arguments
 
 
 def arbitraryArguments(*names):
     for name in names:
         print("Hi", name)
 
-
+print('Function accepting arbitrary number of arguments, *Operator:')
 arbitraryArguments("name1", "name2", "name3")
 
 # Lambda functions
@@ -36,7 +36,7 @@ arbitraryArguments("name1", "name2", "name3")
 def double(x): return x * 3
 
 
-print("Calling lambda function:", double(5))
+print("Lambda functions:", double(5))
 
 # Strings
 print("String manipulation")
@@ -46,18 +46,20 @@ print(str1.replace("Some", "Punith"))
 print("Converting num to string, use str() function")
 num = 10
 print(str(num) + " is a number")
-
+print('in() to check the presence of a word in a string:', "Some" in str1)
 
 # Math Functions
-print("Math functions")
-print("Power:", pow(5, 2), ",Ceiling", ceil(
-    3.4), ",Sqaure root of 25", sqrt(25))
+
+# print("Math functions")
+# print("Power:", pow(5, 2), ",Ceiling", ceil(
+#     3.4), ",Sqaure root of 25", sqrt(25))
 # Needs to import math
 # use max(1, 2), min(10, 12) to find max and  min of 2 numbers
-# round() rounds the value
+# round(value) rounds the value, abs(value)
 # floor(3.2) -> 3
 # ceil(3.4) -> 4
 # sqrt(4) -> 2
+
 
 # Read the values from keybard
 
@@ -77,7 +79,7 @@ for w in words[:]:  # Loop over a slice copy of the entire list.
         # inserts an element to the words array by making a copy
         words.insert(0, w)
 
-print(words)
+print('Insert an item to list:', words)
 
 print("Using range function:")
 a = ["Mary", "had", "a", "little", "lamb"]
@@ -101,6 +103,8 @@ print(friends)
 
 mixed_list = [{1, 2}, [5, 6, 7]]
 
+# Tuples
+
 # number tuple
 number_tuple = (3, 4)
 
@@ -108,6 +112,12 @@ number_tuple = (3, 4)
 mixed_list.insert(1, number_tuple)
 
 print("Updated List: ", mixed_list)
+
+# unpacking a tuple or a list
+item1, item2 = number_tuple
+item3, item4 = [33,22]
+
+print('Unpacking an tuple or list:', item1, item2, item3, item4)
 
 # Calculate the sum of each digit
 
@@ -198,7 +208,6 @@ print("Hello {name}, {greeting}".format(greeting="Goodmorning", name="John"))
 
 print("Format floating number {:.2f}".format(234.333232))
 
-# Tuples
 d = {"a": 1, "b": 2, "c": 3}
 for key in d:
     print(d[key])
@@ -235,3 +244,13 @@ if __name__ == "__main__":
     print("py_basics.py is being run directly")
 else:
     print("py_basics is being used by some other file")
+
+# Arithmetic operations on floting point numbers
+floatDiv = 10 / 3 # returns 3.3333333...
+floatDivAbsolute = 10 // 3 # returns 3, truncating the decimals
+exponentOf3 = 3 ** 3 # returns 27
+
+iterStar = 1
+while iterStar <= 5:
+    print("*" * iterStar)
+    iterStar += 1
